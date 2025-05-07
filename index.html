@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Generalizable Multi-Agent Planning from Signal Temporal Logic Specifications via Diffusion">
+  <!-- <meta name="keywords" content="Nerfies, D-NeRF, NeRF"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Generalizable Multi-Agent Planning from Signal Temporal Logic Specifications via Diffusion</title>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+  />
+
+  <style>
+    /* Keep videos flush to the card edges and maintain 16 × 9 aspect. */
+    .card-content { padding: 0; }
+    .card video   { width: 100%; height: 100%; object-fit: cover; }
+  </style>
+</head>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Generalizable Multi-Agent Planning from Signal Temporal Logic Specifications via Diffusion</h1>
+          <div class="is-size-5 publication-authors">
+            <!-- <span class="author-block">
+              Anonymous</span> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <h1 class="title is-2 has-text-centered">Multi‑Agent Planning Demos</h1>
+
+    <!-- ─────────── Tabs ─────────── -->
+    <div class="tabs is-centered is-boxed">
+      <ul>
+        <li id="tab-hom" class="is-active">
+          <a onclick="showSection('homogeneous')">Homogeneous</a>
+        </li>
+        <li id="tab-het">
+          <a onclick="showSection('heterogeneous')">Heterogeneous</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- ─────────── Homogeneous videos ─────────── -->
+    <div id="homogeneous" class="demo-section">
+      <h2 class="title is-3 has-text-centered">
+        DubinsCar – Sequence&nbsp;of&nbsp;3&nbsp;Goals&nbsp;(Homogeneous)
+      </h2>
+
+      <div class="columns is-multiline is-variable is-4">
+
+        <!-- DIFF‑MA · 8 agents -->
+        <div class="column is-half">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                DIFF‑MA&nbsp;|&nbsp;8 agents&nbsp;|&nbsp;3× speed
+              </p>
+            </header>
+            <div class="card-content">
+              <figure class="image is‑1by1">
+                <video autoplay controls muted loop playsinline preload="metadata">
+                  <source
+                    src="./static/videos/demo/n8_diffma_seq3_3x.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <!-- DIFF‑MA · 32 agents -->
+        <div class="column is-half">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                DIFF‑MA&nbsp;|&nbsp;32 agents&nbsp;|&nbsp;3× speed
+              </p>
+            </header>
+            <div class="card-content">
+              <figure class="image is‑1by1">
+                <video autoplay controls muted loop playsinline preload="metadata">
+                  <source
+                    src="./static/videos/demo/n32_diffma_seq3_3x.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <!-- GNN-ODE · 8 agents -->
+        <div class="column is-half">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                GNN-ODE&nbsp;|&nbsp;8 agents&nbsp;|&nbsp;3× speed
+              </p>
+            </header>
+            <div class="card-content">
+              <figure class="image is‑1by1">
+                <video autoplay controls muted loop playsinline preload="metadata">
+                  <source
+                    src="./static/videos/demo/n8_gnn_seq3_3x_homo.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <!-- GNN-ODE · 32 agents -->
+        <div class="column is-half">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                GNN-ODE&nbsp;|&nbsp;32 agents&nbsp;|&nbsp;3× speed
+              </p>
+            </header>
+            <div class="card-content">
+              <figure class="image is‑1by1">
+                <video autoplay controls muted loop playsinline preload="metadata">
+                  <source
+                    src="./static/videos/demo/n32_gnn_seq3_3x_homo.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <!-- STLPY · 8 agents -->
+        <div class="column is-half">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                STLPY&nbsp;|&nbsp;8 agents&nbsp;|&nbsp;3× speed
+              </p>
+            </header>
+            <div class="card-content">
+              <figure class="image is‑1by1">
+                <video autoplay controls muted loop playsinline preload="metadata">
+                  <source
+                    src="./static/videos/demo/n8_stlpy_seq3_3x_homo.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <!-- STLPY · 32 agents -->
+        <div class="column is-half">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                STLPY&nbsp;|&nbsp;32 agents&nbsp;|&nbsp;3× speed
+              </p>
+            </header>
+            <div class="card-content">
+              <figure class="image is‑1by1">
+                <video autoplay controls muted loop playsinline preload="metadata">
+                  <source
+                    src="./static/videos/demo/n32_stlpy_seq3_3x_homo.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- /#homogeneous -->
+
+    <!-- ─────────── Heterogeneous videos ─────────── -->
+    <div id="heterogeneous" class="demo-section is-hidden">
+      <h2 class="title is-3 has-text-centered">
+        DubinsCar – Heterogeneous&nbsp;Specifications
+      </h2>
+
+      <div class="columns is-multiline is-variable is-4">
+
+        <!-- DIFF‑MA · 8 agents -->
+        <div class="column is-half">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                DIFF‑MA&nbsp;|&nbsp;8 agents&nbsp;|&nbsp;3× speed
+              </p>
+            </header>
+            <div class="card-content">
+              <figure class="image is‑1by1">
+                <video autoplay controls muted loop playsinline preload="metadata">
+                  <source
+                    src="./static/videos/demo/n8_diffma_hetero_3x.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <!-- DIFF‑MA · 32 agents -->
+        <div class="column is-half">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                DIFF‑MA&nbsp;|&nbsp;32 agents&nbsp;|&nbsp;3× speed
+              </p>
+            </header>
+            <div class="card-content">
+              <figure class="image is‑1by1">
+                <video autoplay controls muted loop playsinline preload="metadata">
+                  <source
+                    src="./static/videos/demo/n32_diffma_hetero_3x.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <!-- STLPY · 8 agents -->
+        <div class="column is-half">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                STLPY&nbsp;|&nbsp;8 agents&nbsp;|&nbsp;3× speed
+              </p>
+            </header>
+            <div class="card-content">
+              <figure class="image is‑1by1">
+                <video autoplay controls muted loop playsinline preload="metadata">
+                  <source
+                    src="./static/videos/demo/n8_stlpy_hetero_3x.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <!-- STLPY · 32 agents -->
+        <div class="column is-half">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                STLPY&nbsp;|&nbsp;32 agents&nbsp;|&nbsp;3× speed
+              </p>
+            </header>
+            <div class="card-content">
+              <figure class="image is‑1by1">
+                <video autoplay controls muted loop playsinline preload="metadata">
+                  <source
+                    src="./static/videos/demo/n32_stlpy_hetero_3x.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </figure>
+            </div>
+          </div>
+        </div>
+        
+
+      </div>
+    </div><!-- /#heterogeneous -->
+
+  </div><!-- /.container -->
+</section>
+
+<!-- ─────────── Simple JS to toggle sections ─────────── -->
+<script>
+  function showSection(which) {
+    const homSec = document.getElementById('homogeneous');
+    const hetSec = document.getElementById('heterogeneous');
+    const homTab = document.getElementById('tab-hom');
+    const hetTab = document.getElementById('tab-het');
+
+    if (which === 'homogeneous') {
+      homSec.classList.remove('is-hidden');
+      hetSec.classList.add('is-hidden');
+      homTab.classList.add('is-active');
+      hetTab.classList.remove('is-active');
+    } else {
+      hetSec.classList.remove('is-hidden');
+      homSec.classList.add('is-hidden');
+      hetTab.classList.add('is-active');
+      homTab.classList.remove('is-active');
+    }
+  }
+</script>
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <!-- <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
